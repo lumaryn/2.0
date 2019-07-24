@@ -1,3 +1,4 @@
+import java.awt.*;
 import java.util.Scanner;
 
 /**
@@ -10,7 +11,7 @@ public class Ex_3 {
         Scanner sc = new Scanner(System.in);
         System.out.println("Ведите 1 если нужен калькулятор или 2 если нужно найти самое длинное слово");
         int z = sc.nextInt();
-        if (z == 2) {
+        if (z == 1) {
             System.out.println("Выберите операцию:  *  /  -  +");
             char x = sc.next().charAt(0);
             System.out.println("Введите 1 число");
@@ -31,16 +32,33 @@ public class Ex_3 {
                 System.out.printf("subtr = %.4f", (a - b));
             }
         }
-        if (z == 1)  {
+        else if (z == 2)  {
+            int yy = 0;
+            int n = 0;
+            int y =0;
             System.out.println("Укажите количество слов");
             int amount = sc.nextInt();
             String[] s = new String[amount];
-            for (int y = 0; y < s.length; y++) {
+            while (y < s.length){
+            //for ( int y =0; y < amount; y++) {
+                System.out.println("Введите слово");
                 s[y] = sc.nextLine();
+               int xx = s[y].length();
+                if (xx > yy){
+                    yy = xx;
+                    n = y;
+                    y++;
+
+                }}
+            System.out.println(s[n]);
+            }
+
+
+
             }
 
 
         }
-    }
-}
+
+
 
