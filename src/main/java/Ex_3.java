@@ -17,7 +17,7 @@ public class Ex_3 {
             z = sc.nextInt();
 
             if((z != 1) & (z != 2)){
-            System.out.println("Введите либо 1, либо 2");
+                System.out.println("Введите либо 1, либо 2");
             }
         }
 
@@ -62,11 +62,3 @@ public class Ex_3 {
         }
     }
 }
-
-
-
-
-
-
-
-
