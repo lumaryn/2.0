@@ -39,7 +39,7 @@ public class Ex_3 {
             System.out.println("Укажите количество слов");
             int amount = sc.nextInt();
             String[] s = new String[amount];
-            while (y < s.length){
+            do{
             //for ( int y =0; y < amount; y++) {
                 System.out.println("Введите слово");
                 s[y] = sc.nextLine();
@@ -49,7 +49,8 @@ public class Ex_3 {
                     n = y;
                     y++;
 
-                }}
+                }while (y < s.length)
+            }
             System.out.println(s[n]);
             }
 
