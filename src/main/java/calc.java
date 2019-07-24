@@ -3,7 +3,7 @@ import java.util.Scanner;
 /**
  *created by aplana on 23.07
  *@author aplana
- **/
+ */
 
 public class calc {
     public static void main(String[] args) {
