@@ -1,4 +1,3 @@
-import java.awt.*;
 import java.util.Scanner;
 
 /**
@@ -8,9 +7,20 @@ import java.util.Scanner;
 
 public class Ex_3 {
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
-        System.out.println("Ведите 1 если нужен калькулятор или 2 если нужно найти самое длинное слово");
-        int z = sc.nextInt();
+
+        int z = 0;
+        System.out.println("Ведите 1 если нужен калькулятор, или 2 если нужно найти самое длинное слово");
+
+        while ((z != 1) & (z != 2)) {
+            z = sc.nextInt();
+
+            if((z != 1) & (z != 2)){
+            System.out.println("Введите либо 1, либо 2");
+            }
+        }
+
         if (z == 1) {
             System.out.println("Выберите операцию:  *  /  -  +");
             char x = sc.next().charAt(0);
@@ -31,35 +41,32 @@ public class Ex_3 {
             if (x == '-') {
                 System.out.printf("subtr = %.4f", (a - b));
             }
-        }
-        else if (z == 2)  {
-            int yy = 0;
+
+        } else if (z == 2) {
+            int g = 0;
             int n = 0;
-            int y =0;
             System.out.println("Укажите количество слов");
             int amount = sc.nextInt();
-            String[] s = new String[amount];
-            do{
-            //for ( int y =0; y < amount; y++) {
+            String[] s = new String[amount + 1]; /**так и не понял, почему при заполнении строкового массива у меня всегда пропускается
+             элемент с индексом 0. Поэтому добавил одно слово. Если массив int, тогда все нормально. */
+            for (int y = 0; y < s.length; y++) {
                 System.out.println("Введите слово");
                 s[y] = sc.nextLine();
-               int xx = s[y].length();
-                if (xx > yy){
-                    yy = xx;
+                int t = s[y].length();
+                if (t >= g) {
+                    g = t;
                     n = y;
-                    y++;
-
-                }while (y < s.length)
+                }
             }
-            System.out.println(s[n]);
-            }
-
-
-
-            }
-
-
+            System.out.println("Самое длинное слово:  " + s[n]);
         }
+    }
+}
+
+
+
+
+
 
 
 
