@@ -25,7 +25,7 @@ public class Sweet {
             return weight;
         }
 
-        public void setWeight(Integer weight) {
+        public void setWeight(int weight) {
             this.weight = weight;
         }
 
@@ -33,7 +33,7 @@ public class Sweet {
             return price;
         }
 
-        public void setPrice(Integer price) {
+        public void setPrice(int price) {
             this.price = price;
         }
 
